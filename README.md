@@ -13,23 +13,23 @@ Initiating a new Souffle with options:
 ```
 /*
 	duration: duration of timer in ms
-  tick: tick length in ms
-  recurring: recurring function that runs every tick
+	tick: tick length in ms
+	recurring: recurring function that runs every tick
 */
 var timer = new Souffle({
 	duration: 60000,
-  tick: 500,
-  recurring: function() {
-  	console.log("Tick.");
-  }
+	tick: 500,
+	recurring: function() {
+		console.log("Tick.");
+	}
 });
 ```
 A default Souffle is equivalent to:
 ```
 var timer = new Souffle({
 	duration: 10000,
-  tick: 1000,
-  recurring: null
+	tick: 1000,
+	recurring: null
 });
 ```
 
