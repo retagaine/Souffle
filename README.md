@@ -5,12 +5,12 @@ Simple Javascript timer named after a dish I once had. Souffles run in milliseco
 ## Examples
 
 Initiating a new Souffle:
-```
+```javascript
 var timer = new Souffle();
 ```
 
 Initiating a new Souffle with options:
-```
+```javascript
 /*
 	duration: duration of timer in ms
 	tick: tick length in ms
@@ -25,7 +25,7 @@ var timer = new Souffle({
 });
 ```
 A default Souffle is equivalent to:
-```
+```javascript
 var timer = new Souffle({
 	duration: 10000,
 	tick: 1000,
@@ -36,22 +36,22 @@ var timer = new Souffle({
 ## Methods
 
 Starting a Souffle:
-```
+```javascript
 timer.start();
 ```
 
 Getting elapsed time in ms:
-```
+```javascript
 timer.getTime();
 ```
 
 Pausing and unpausing a Souffle:
-```
+```javascript
 timer.pause();
 timer.unpause();
 ```
 
 When a Souffle is finished:
-```
+```javascript
 timer.finish();
 ```
