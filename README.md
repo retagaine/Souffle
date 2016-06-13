@@ -24,12 +24,24 @@ var timer = new Souffle({
 	}
 });
 ```
+
 A default Souffle is equivalent to:
 ```javascript
 var timer = new Souffle({
 	duration: 10000,
 	tick: 1000,
 	recurring: null
+});
+```
+
+Turning a Souffle into a countdown timer:
+```javascript
+var timer = new Souffle({
+	duration: 10000,
+	tick: 1000,
+	recurring: function() {
+		console.log(timer.options.duration - timer.getTime());
+	}
 });
 ```
 
