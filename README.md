@@ -45,6 +45,24 @@ var timer = new Souffle({
 });
 ```
 
+Outputting Souffle time counting up in ```HH:MM:SS```:
+```javascript
+function formatTime(milliseconds) {
+    var seconds = Math.floor(milliseconds / 1000);
+    return ("00" + Math.floor(seconds / 3600)).slice(-2) + ":" + ("00" + (Math.floor(seconds / 60) % 60)).slice(-2) + ":" + ("00" + (seconds % 60)).slice(-2);
+}
+formatTime(timer.getTime());
+```
+
+Outputting Souffle time counting down in ```HH:MM:SS```:
+```javascript
+function formatTime(milliseconds) {
+    var seconds = Math.ceil(milliseconds / 1000);
+    return ("00" + Math.floor(seconds / 3600)).slice(-2) + ":" + ("00" + (Math.floor(seconds / 60) % 60)).slice(-2) + ":" + ("00" + (seconds % 60)).slice(-2);
+}
+formatTime(timer.options.duration - timer.getTime());
+```
+
 ## Methods
 
 Starting a Souffle:
